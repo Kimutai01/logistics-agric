@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_08_164523) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "description"
-    t.string "score"
+    t.integer "score"
     t.integer "book_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
