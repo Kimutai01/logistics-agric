@@ -8,6 +8,7 @@ class Api::V1::ReviewsController < ApplicationController
 
     def create
         review = Review.create(review_params)
+        review.user = current_user
         reviews = Review.all
         render json: reviews
     end
@@ -21,6 +22,6 @@ class Api::V1::ReviewsController < ApplicationController
 
     private
     def review_params
-        params.require(:review).permit(:description, :score , :book_id, :user_id)
+        params.require(:review).permit(:description, :score , :book_id)
     end
 end
