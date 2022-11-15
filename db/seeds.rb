@@ -18,7 +18,6 @@ books = Book.create([
     {name: "The Great Gatsby"},
     {name: "The Catcher in the Rye"},
     {name: "The Grapes of Wrath"},
-   
 ])  
 
 
